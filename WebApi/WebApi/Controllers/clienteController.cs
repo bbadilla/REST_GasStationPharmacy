@@ -1,32 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using WeApi.Models;
+using WebApi.Models;
 
 namespace WeApi.Controllers
 {
     public class clienteController : ApiController
     {
 
-        Cliente[] clientes = new Cliente[]{
-       
-        new Cliente{cedula=109854122,nombre="Emanuel",apellidos="Esquivel Lopez", residencia="Palmares", fechaNacimiento="XX/XX/98", telefono=85254547, padecimientos= "dormir"},
-        new Cliente{cedula=451211185,nombre="Vini",apellidos="Abendano Monge", residencia="XXX", fechaNacimiento="XX/XX/98", telefono=34556577, padecimientos= "LOL"}
-           
-       };
+     
 
+        public IEnumerable<Cliente> Get() {
 
-        public IEnumerable<Cliente> GetAllCliente() {
-            return clientes;
+            ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
+            var result = ClienteService.GetAll();
+            return result;
+            
         }
 
 
-        public IHttpActionResult GetCliente(string id) {
-            var client = clientes.FirstOrDefault((c)=>c.nombre==id);
-            if (client!=null)
+       /*[ResponseType(typeof(Cliente))]
+        public IHttpActionResult GetCliente(Cliente  cliente)
+        {
+            var client = cliente.Name.FirstOrDefault((c) => c == cliente.Name);
+            if (client != null)
             {
                 return Ok(client);
             }
@@ -34,6 +39,25 @@ namespace WeApi.Controllers
             {
                 return NotFound();
             }
+
+         }*/
+
+        public void Post(Cliente cliente)
+        {
+            /*var cliente = new Cliente()
+            {
+                nombre = nombre,
+                apellidos = apellidos,
+                cedula = cedula, 
+                residencia = residencia,
+                fechaNacimiento = fechaNacimiento,
+                telefono= telefono,
+                padecimientos= padecimientos
+                
+            };*/
+
+            ClienteService.AddCliente(cliente);
+
         }
 
     }

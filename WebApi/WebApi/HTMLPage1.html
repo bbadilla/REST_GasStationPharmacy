@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clientes</title>
+</head>
+<body>
+
+    <div>
+        <h2>Clientes</h2>
+        <ul id="cliente" />
+    </div>
+    <div>
+        <h2>Busqueda por ID</h2>
+        <input type="text" id="name" size="5" />
+        <input type="button" value="Buscar" onclick="find();" />
+        <p id="cliente" />
+    </div>
+    <table>
+        <tr>
+            <td>
+                apellidos
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="apellidos" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                nombre
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cedula
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="cedula" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                residencia
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="residencia" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                telefono
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="telefono" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                fechaNacimiento
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="fechaNacimiento" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                padecimientos
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="padecimientos" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="Enviar">Enviar</button>
+            </td>
+        </tr>
+    </table>
+
+  
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+        <script>
+            var uri = 'api/cliente';
+
+            $(document).ready(function () {
+                // Send an AJAX request
+                cargarClientes();
+                $("#Enviar").click(enviarDatos);
+
+            });
+
+            function cargarClientes() {
+                $.getJSON(uri)
+                    .done(function (data) {
+
+                        $.each(data, function (key, item) {
+
+                            $('<li>', { text: formatItem(item) }).appendTo($('#cliente'));
+                        });
+                    });
+            }
+
+            function formatItem(item) {
+                return item.cedula + '  ' + item.name + '  ' + item.apellidos;
+            }
+
+            function find() {
+                var id = $('#name').val();
+                $.getJSON(uri + '/' + id)
+                    .done(function (data) {
+                        $('#cliente').text(formatItem(data));
+                    })
+                    .fail(function (jqXHR, textStatus, err) {
+                        $('#cliente').text('Error: ' + err);
+                    });
+            }
+
+            function enviarDatos() {
+                var cliente = {};
+                cliente.name = $("#name").val();
+                cliente.apellidos = $("#apellidos").val();
+                cliente.cedula = $("#cedula").val();
+                cliente.telefono = $("#telefono").val();
+                cliente.residencia = $("#residencia").val();
+                cliente.padecimientos = $("#padecimientos").val();
+                cliente.fechaNacimiento = $("fechaNacimiento").val()
+
+                llamadoAsincrono(uri, cliente, terminado);
+            }
+
+            function terminado() {
+
+                cargarClientes();
+                alert("Enviado Correctamente");
+            }
+
+            function llamadoAsincrono(url, data, success) {
+
+                $.ajax(
+                    {
+                        url: url,
+                        type: "POST",
+                        success: success,
+                        error: capturarError,
+                        data: JSON.stringify(data),
+                        contentType: "application/json"
+                    });
+            }
+
+            function capturarError(error) {
+                alert(error);
+            }
+
+           
+
+        </script>
+</body>
+</html>

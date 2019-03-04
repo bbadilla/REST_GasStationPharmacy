@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCliente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cliente>
+    <Cedula>109854122</Cedula>
+    <Apellidos>Esquivel Lopez</Apellidos>
+    <Residencia>Palmares</Residencia>
+    <FechaNacimiento>XX/XX/98</FechaNacimiento>
+    <Telefono>85254547</Telefono>
+    <Padecimientos>dormir</Padecimientos>
+    <Name>Emanuel</Name>
+  </Cliente>
+  <Cliente>
+    <Cedula>305090714</Cedula>
+    <Apellidos>Badilla Amador</Apellidos>
+    <Residencia>Frailes</Residencia>
+    <Telefono>25448778</Telefono>
+    <Padecimientos>pereza</Padecimientos>
+    <Name>Bryan</Name>
+  </Cliente>
+  <Cliente>
+    <Cedula>2352553</Cedula>
+    <Apellidos>farafav</Apellidos>
+    <Residencia>ddfsfd</Residencia>
+    <Telefono>432443</Telefono>
+    <Padecimientos>dad</Padecimientos>
+    <Name>dasda</Name>
+  </Cliente>
+</ArrayOfCliente>

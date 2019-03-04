@@ -94,3 +94,7 @@ C:\Users\Bryan\Desktop\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.c
 C:\Users\Bryan\Desktop\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 C:\Users\Bryan\Desktop\WebApi\WebApi\obj\Debug\WebApi.dll
 C:\Users\Bryan\Desktop\WebApi\WebApi\obj\Debug\WebApi.pdb
+C:\Users\Bryan\Desktop\WebApi\WebApi\bin\EntityFramework.dll
+C:\Users\Bryan\Desktop\WebApi\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\Bryan\Desktop\WebApi\WebApi\bin\EntityFramework.xml
+C:\Users\Bryan\Desktop\WebApi\WebApi\bin\EntityFramework.SqlServer.xml

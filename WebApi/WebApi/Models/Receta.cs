@@ -6,10 +6,86 @@ using System.Web;
 namespace WeApi.Models
 {
     public class Receta
-    {
-        public int numero { get; set; }
-        public string doctor { get; set; }
-        public string medicamentos { get; set; }
-        public string imagen { get; set; }
+    { 
+
+        private string doctor;
+
+        public string Doctor
+        {
+            get
+            {
+                return this.doctor;
+            }
+
+            set
+            {
+                this.doctor = value;
+            }
+        }
+        /////
+        ///
+        private int numero;
+
+        public int Numero
+        {
+            get
+            {
+                return this.numero;
+            }
+
+            set
+            {
+                this.numero = value;
+            }
+        }
+        /////
+        ///
+
+        private string medicamentos;
+
+        public string Medicamentos
+        {
+            get
+            {
+                return this.medicamentos;
+            }
+
+            set
+            {
+                this.medicamentos = value;
+            }
+        }
+        /////
+        ///
+        private string imagen;
+
+        public string Imagen
+        {
+            get
+            {
+                return this.imagen;
+            }
+
+            set
+            {
+                this.imagen = value;
+            }
+        }
+
+        private string cliente;
+
+        public string Cliente
+        {
+            get
+            {
+                return this.cliente;
+            }
+
+            set
+            {
+                this.cliente = value;
+            }
+        }
+
     }
 }

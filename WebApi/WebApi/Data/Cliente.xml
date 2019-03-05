@@ -7,7 +7,7 @@
     <FechaNacimiento>XX/XX/98</FechaNacimiento>
     <Telefono>85254547</Telefono>
     <Padecimientos>dormir</Padecimientos>
-    <Name>Emanuel</Name>
+    <Nombre>Emanuel</Nombre>
   </Cliente>
   <Cliente>
     <Cedula>305090714</Cedula>
@@ -15,14 +15,30 @@
     <Residencia>Frailes</Residencia>
     <Telefono>25448778</Telefono>
     <Padecimientos>pereza</Padecimientos>
-    <Name>Bryan</Name>
+    <Nombre>Bryan</Nombre>
   </Cliente>
   <Cliente>
-    <Cedula>2352553</Cedula>
-    <Apellidos>farafav</Apellidos>
-    <Residencia>ddfsfd</Residencia>
-    <Telefono>432443</Telefono>
-    <Padecimientos>dad</Padecimientos>
-    <Name>dasda</Name>
+    <Cedula>216484</Cedula>
+    <Apellidos>AVENDANO </Apellidos>
+    <Residencia>UGJHBJH</Residencia>
+    <Telefono>87845454</Telefono>
+    <Padecimientos>HJYJYFJY</Padecimientos>
+    <Nombre>VINI</Nombre>
+  </Cliente>
+  <Cliente>
+    <Cedula>216484</Cedula>
+    <Apellidos>AVENDANO </Apellidos>
+    <Residencia>UGJHBJH</Residencia>
+    <Telefono>87845454</Telefono>
+    <Padecimientos>HJYJYFJY</Padecimientos>
+    <Nombre>VINI</Nombre>
+  </Cliente>
+  <Cliente>
+    <Cedula>216484</Cedula>
+    <Apellidos>AVENDANO </Apellidos>
+    <Residencia>UGJHBJH</Residencia>
+    <Telefono>87845454</Telefono>
+    <Padecimientos>HJYJYFJY</Padecimientos>
+    <Nombre>VINI</Nombre>
   </Cliente>
 </ArrayOfCliente>

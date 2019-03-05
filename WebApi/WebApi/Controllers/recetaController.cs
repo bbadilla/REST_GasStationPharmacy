@@ -5,37 +5,27 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WeApi.Models;
+using WebApi.Models;
 
 namespace WeApi.Controllers
 {
     public class recetaController : ApiController
     {
 
-        Receta[] recetas = new Receta[]{
-
-        new Receta{numero=116,doctor="Juanito Mora",medicamentos="pastillas", imagen="imagen"},
-    
-       };
-
-
-        public IEnumerable<Receta> GetAllReceta()
+        public IEnumerable<Receta> Get()
         {
-            return recetas;
+
+            //ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
+            var result = RecetaService.GetAll();
+            return result;
+
         }
 
-
-        public IHttpActionResult GetReceta(int id)
+        public void Post(Receta receta)
         {
-            var doc = recetas.FirstOrDefault((c) => c.numero == id);
-            if (doc != null)
-            {
-                return Ok(doc);
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
 
+            RecetaService.AddCliente(receta);
+
+        }
     }
 }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ArrayOfDoctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Doctor>
+    <Cedula>109854122</Cedula>
+    <Apellidos>Esquivel Lopez</Apellidos>
+    <Residencia>Palmares</Residencia>
+    <FechaNacimiento>XX/XX/98</FechaNacimiento>
+    <NumDoctor>85254547</NumDoctor>
+    <Nombre>Emanuel</Nombre>
+  </Doctor>
+  
+</ArrayOfDoctor>

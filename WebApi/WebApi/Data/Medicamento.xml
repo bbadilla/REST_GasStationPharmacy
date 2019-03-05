@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ArrayOfMedicamento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Medicamento>
+    <Cantidad>10000</Cantidad>
+    <Farmacia>La bomba</Farmacia>
+    <Precio>500</Precio>
+    <Prescripcion>SI</Prescripcion>
+    <Nombre>Paracetamol</Nombre>
+  </Medicamento>
+
+</ArrayOfMedicamento>

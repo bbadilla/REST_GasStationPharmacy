@@ -5,37 +5,27 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WeApi.Models;
+using WebApi.Service_Logic;
 
 namespace WeApi.Controllers
 {
     public class doctorController : ApiController
     {
 
-        Doctor[] doctores = new Doctor[]{
-
-        new Doctor{cedula=102151458,nombre="Mario",apellidos="Uasas sdsas", residencia="Italia", fechaNacimiento="XX/XX/98"},
-        new Doctor{cedula=451211185,nombre="Vini",apellidos="Abendano Monge", residencia="XXX", fechaNacimiento="XX/XX/98"}
-
-       };
-
-
-        public IEnumerable<Doctor> GetAllDoctor()
+        public IEnumerable<Doctor> Get()
         {
-            return doctores;
+
+            //ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
+            var result = DoctorService.GetAll();
+            return result;
+
         }
 
-
-        public IHttpActionResult GetDoctor(string id)
+        public void Post(Doctor doctor)
         {
-            var doc = doctores.FirstOrDefault((c) => c.nombre == id);
-            if (doc != null)
-            {
-                return Ok(doc);
-            }
-            else
-            {
-                return NotFound();
-            }
+
+            DoctorService.AddDoctor(doctor);
+
         }
 
     }

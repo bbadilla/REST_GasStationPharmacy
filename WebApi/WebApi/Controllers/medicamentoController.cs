@@ -5,38 +5,29 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WeApi.Models;
+using WebApi.Service_Logic;
 
 namespace WeApi.Controllers
 {
     public class medicamentoController : ApiController
     {
 
-        Medicamento[] medicamentos = new Medicamento[]{
+        public IEnumerable<Medicamento> Get() {
 
-        new Medicamento{nombre="paracetamol",farmacia="La bomba",prescripcion="NO", cantidad=10000, precio=500},
-        new Medicamento{nombre="Tapcin",farmacia="Fishel",prescripcion="NO", cantidad=999, precio=1000},
+            //ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
+            var result = MedicamentoService.GetAll();
+            return result;
 
-       };
-
-
-        public IEnumerable<Medicamento> GetAllMedicamento()
-        {
-            return medicamentos;
         }
 
-
-        public IHttpActionResult GetMedicamento(string id)
+        public void Post(Medicamento medicamento)
         {
-            var doc = medicamentos.FirstOrDefault((c) => c.nombre == id);
-            if (doc != null)
-            {
-                return Ok(doc);
-            }
-            else
-            {
-                return NotFound();
-            }
+
+            MedicamentoService.AddMedicamento(medicamento);
+
         }
 
     }
+
+}
 }

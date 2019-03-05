@@ -5,39 +5,29 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WeApi.Models;
-
-
+using WebApi.Models;
 
 namespace WeApi.Controllers
 {
     public class pedidoController : ApiController
     {
 
-        Pedido[] pedidos = new Pedido[]{
-
-        new Pedido{recojo="la bomba cartago",cliente="Juanito Mora",telefono="25411014", listaMedicamentos="Drogas", hora="4:30pm", imagen="imagen"},
-
-       };
-
-
-        public IEnumerable<Pedido> GetAllPedido()
+        public IEnumerable<Pedido> Get()
         {
-            return pedidos;
+
+            //ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
+            var result = PedidoService.GetAll();
+            return result;
+
         }
 
-
-        public IHttpActionResult GetPedido(string id)
+        public void Post(Pedido pedido)
         {
-            var doc = pedidos.FirstOrDefault((c) => c.cliente == id);
-            if (doc != null)
-            {
-                return Ok(doc);
-            }
-            else
-            {
-                return NotFound();
-            }
+
+            PedidoService.AddPedido(pedido);
+
         }
 
     }
+
 }

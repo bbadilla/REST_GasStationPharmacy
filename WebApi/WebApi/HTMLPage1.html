@@ -11,7 +11,7 @@
     </div>
     <div>
         <h2>Busqueda por ID</h2>
-        <input type="text" id="name" size="5" />
+        <input type="text" id="nombre1" size="5" />
         <input type="button" value="Buscar" onclick="find();" />
         <p id="cliente" />
     </div>
@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td>
-                <input type="text" id="name" />
+                <input type="text" id="nombre" />
             </td>
         </tr>
         <tr>
@@ -117,11 +117,11 @@
             }
 
             function formatItem(item) {
-                return item.cedula + '  ' + item.name + '  ' + item.apellidos;
+                return item.cedula + '  ' + item.nombre + '  ' + item.apellidos;
             }
 
             function find() {
-                var id = $('#name').val();
+                var id = $('#nombre').val();
                 $.getJSON(uri + '/' + id)
                     .done(function (data) {
                         $('#cliente').text(formatItem(data));
@@ -133,7 +133,7 @@
 
             function enviarDatos() {
                 var cliente = {};
-                cliente.name = $("#name").val();
+                cliente.nombre = $("#nombre").val();
                 cliente.apellidos = $("#apellidos").val();
                 cliente.cedula = $("#cedula").val();
                 cliente.telefono = $("#telefono").val();

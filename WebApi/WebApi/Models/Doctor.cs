@@ -7,12 +7,120 @@ namespace WeApi.Models
 {
     public class Doctor
     {
-        public int cedula { get; set; }
-        public int numDoctor { get; set; }
-        public string nombre { get; set; }
-        public string apellidos { get; set; }
-        public string residencia { get; set; }
-        public string fechaNacimiento { get; set; }
+
+        ///  CEDULAAA
+        private int cedula;
+
+        public int Cedula
+        {
+            get
+            {
+                return this.cedula;
+            }
+
+            set
+            {
+                this.cedula = value;
+            }
+
+        }
+
+        /// <summary>
+        /// /
+        /// </summary>
+        private string apellidos;
+
+        public string Apellidos
+        {
+            get
+            {
+                return this.apellidos;
+            }
+
+            set
+            {
+                this.apellidos = value;
+            }
+        }
+
+        /// <summary>
+        /// //
+        /// </summary>
+        private string residencia;
+
+        public string Residencia
+        {
+            get
+            {
+                return this.residencia;
+            }
+
+            set
+            {
+                this.residencia = value;
+            }
+        }
+        /// <summary>
+        /// //
+        /// </summary>
+
+
+        //////
+        private string fechaNacimiento;
+
+        public string FechaNacimiento
+        {
+            get
+            {
+                return this.fechaNacimiento;
+            }
+
+            set
+            {
+                this.fechaNacimiento = value;
+            }
+        }
+
+        /// <summary>
+        /// ///
+        /// </summary>
+        private int numDoctor;
+
+        public int NumDoctor
+        {
+            get
+            {
+                return this.numDoctor;
+            }
+
+            set
+            {
+                this.numDoctor = value;
+            }
+        }
+
+        /// <summary>
+        /// /
+        /// </summary>
+        
+
+        /// <summary>
+        /// //
+        /// </summary>
+        private string nombre;
+
+        public string Nombre
+        {
+            get
+            {
+                return this.nombre;
+            }
+
+            set
+            {
+                this.nombre = value;
+            }
+        }
 
     }
 }

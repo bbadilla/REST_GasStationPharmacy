@@ -7,12 +7,122 @@ namespace WeApi.Models
 {
     public class Pedido
     {
-        public string recojo { get; set; }
-        public string cliente { get; set; }
-        public string telefono { get; set; }
-        public string listaMedicamentos { get; set; }
-        public string hora { get; set; }
-        public string imagen { get; set; }
         
+
+        private string recojo;
+
+        public string Recojo
+        {
+            get
+            {
+                return this.recojo;
+            }
+
+            set
+            {
+                this.recojo = value;
+            }
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string cliente;
+
+
+        public string Cliente
+        {
+            get
+            {
+                return this.cliente;
+            }
+
+            set
+            {
+                this.cliente = value;
+            }
+
+        }
+
+        /////
+        ///
+        private string telefono;
+
+
+        public string Telefono
+        {
+            get
+            {
+                return this.telefono;
+            }
+
+            set
+            {
+                this.telefono = value;
+            }
+
+        }
+
+        /////
+        ///
+        private string listaMedicamentos;
+
+
+        public string ListaMedicamentos
+        {
+            get
+            {
+                return this.listaMedicamentos;
+            }
+
+            set
+            {
+                this.listaMedicamentos = value;
+            }
+
+        }
+
+        /////
+        ///
+        private string hora;
+
+
+        public string Hora
+        {
+            get
+            {
+                return this.hora;
+            }
+
+            set
+            {
+                this.hora = value;
+            }
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private string imagen;
+
+
+        public string Imagen
+        {
+            get
+            {
+                return this.imagen;
+            }
+
+            set
+            {
+                this.imagen = value;
+            }
+
+        }
+
+
+
     }
 }

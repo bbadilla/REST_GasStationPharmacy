@@ -10,7 +10,8 @@ namespace WeApi.Models
     public class Cliente
     {
        
-
+     
+        ///  CEDULAAA
         private int cedula;
 
         public int Cedula {
@@ -24,20 +25,9 @@ namespace WeApi.Models
             
         }
 
-        private string nombreC;
-
-        public string NombreC
-        {
-            get
-            {
-                return this.nombreC;
-            }
-
-            set
-            {
-                this.nombreC = value;
-            }
-        }
+      /// <summary>
+      /// /
+      /// </summary>
         private string apellidos;
 
         public string Apellidos
@@ -50,6 +40,10 @@ namespace WeApi.Models
                 this.apellidos = value;
             }
         }
+
+        /// <summary>
+        /// //
+        /// </summary>
         private string residencia;
 
         public string Residencia
@@ -62,6 +56,12 @@ namespace WeApi.Models
                 this.residencia = value;
             }
         }
+        /// <summary>
+        /// //
+        /// </summary>
+
+      
+        //////
         private string fechaNacimiento;
 
         public string FechaNacimiento
@@ -74,6 +74,10 @@ namespace WeApi.Models
                 this.fechaNacimiento = value;
             }
         }
+
+        /// <summary>
+        /// ///
+        /// </summary>
         private int telefono;
 
         public int Telefono
@@ -86,6 +90,10 @@ namespace WeApi.Models
                 this.telefono = value;
             }
         }
+
+        /// <summary>
+        /// /
+        /// </summary>
         private string padecimientos;
 
         public string Padecimientos
@@ -99,21 +107,25 @@ namespace WeApi.Models
             }
         }
 
-        private string name;
+        /// <summary>
+        /// //
+        /// </summary>
+        private string nombre;
 
-        public string Name
+        public string Nombre
         {
             get
             {
-                return this.name;
+                return this.nombre;
             }
 
             set
             {
-                this.name = value;
+                this.nombre = value;
             }
         }
 
+        
 
 
 

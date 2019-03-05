@@ -176,12 +176,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\ClienteService.cs" />
+    <Compile Include="Service_Logic\DoctorService.cs" />
+    <Compile Include="Service_Logic\ClienteService.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Medicamento.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Receta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service_Logic\MedicamentoService.cs" />
+    <Compile Include="Service_Logic\PedidoService.cs" />
+    <Compile Include="Service_Logic\RecetaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -192,6 +196,10 @@
     <Content Include="Data\Cliente.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Data\Doctor.xml" />
+    <Content Include="Data\Medicamento.xml" />
+    <Content Include="Data\Pedido.xml" />
+    <Content Include="Data\Receta.xml" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

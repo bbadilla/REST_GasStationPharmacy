@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ArrayOfPedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pedido>
+    <Numero>100225</Numero>
+    <Medicamentos>acetaminofen tabcin antifludes</Medicamentos>
+    <ListaMedicamentos>pastillas, gotas</ListaMedicamentos>
+    <Cliente>Homero Simpson</Cliente>
+    <Imagen>Imagen</Imagen>
+    <Doctor>Vini Esquivel lopez</Doctor>
+  </Pedido>
+
+</ArrayOfPedido>

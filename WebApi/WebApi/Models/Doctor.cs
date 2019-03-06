@@ -8,7 +8,9 @@ namespace WeApi.Models
     public class Doctor
     {
 
-        ///  CEDULAAA
+        /// <summary>
+        /// Atributo cedula con su get y set
+        /// </summary>
         private int cedula;
 
         public int Cedula
@@ -26,7 +28,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// /
+        /// Atributo apellidos con su get y set
         /// </summary>
         private string apellidos;
 
@@ -44,7 +46,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// //
+        /// Atributo residencia con su get y set
         /// </summary>
         private string residencia;
 
@@ -60,12 +62,10 @@ namespace WeApi.Models
                 this.residencia = value;
             }
         }
+
         /// <summary>
-        /// //
+        /// Atributo fechaNacimiento con su get y set
         /// </summary>
-
-
-        //////
         private string fechaNacimiento;
 
         public string FechaNacimiento
@@ -82,7 +82,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// ///
+        /// Atributo numDoctor con su get y set
         /// </summary>
         private int numDoctor;
 
@@ -100,12 +100,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// /
-        /// </summary>
-        
-
-        /// <summary>
-        /// //
+        /// Atributo nombre con su get y set
         /// </summary>
         private string nombre;
 

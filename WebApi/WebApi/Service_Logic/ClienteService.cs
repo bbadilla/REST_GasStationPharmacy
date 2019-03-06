@@ -13,10 +13,17 @@ namespace WebApi.Models
 {
     public class ClienteService
     {
-        private static object cliente;
+        //private static object cliente;
 
+            /// <summary>
+            /// direccion de los xml
+            /// </summary>
         public static string SiteAddress { get; set; }
 
+        /// <summary>
+        /// Obtiene todos los elementos de los xml
+        /// </summary>
+        /// <returns></returns>
         public static List<Cliente> GetAll(){
 
             var doc = XElement.Load(ConfigurationManager.AppSettings["Archivo1"]);
@@ -28,7 +35,10 @@ namespace WebApi.Models
 
  
 
-
+        /// <summary>
+        /// Anade un nuevo cliente al xml
+        /// </summary>
+        /// <param name="cliente"></param>
         public static void AddCliente(Cliente cliente) {
 
             var clientes = GetAll();
@@ -37,6 +47,12 @@ namespace WebApi.Models
             doc.Save(ConfigurationManager.AppSettings["Archivo1"]);
         }
 
+        /// <summary>
+        /// Serializa el xml
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         private static XDocument Serialize<T>(T source) {
 
             XDocument target = new XDocument();

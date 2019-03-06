@@ -12,10 +12,17 @@ namespace WebApi.Service_Logic
 {
     public class DoctorService
     {
-        private static object doctor;
+        //private static object doctor;
 
+        /// <summary>
+        /// direccion de los xml
+        /// </summary>
         public static string SiteAddress { get; set; }
 
+        /// <summary>
+        /// Obtiene todos los elementos de los xml
+        /// </summary>
+        /// <returns></returns>
         public static List<Doctor> GetAll()
         {
 
@@ -28,18 +35,26 @@ namespace WebApi.Service_Logic
 
 
 
-
+        /// <summary>
+        /// anade un nuevo doctor al xml
+        /// </summary>
+        /// <param name="doctor"></param>
         public static void AddDoctor(Doctor doctor)
         {
 
             var doctores = GetAll();
             doctores.Add(doctor);
             XDocument doc = Serialize<List<Doctor>>(doctores);
-            doc.Save(ConfigurationManager.AppSettings["Archivo1"]);
+            doc.Save(ConfigurationManager.AppSettings["Archivo2"]);
         }
 
        
-
+        /// <summary>
+        /// /serializa el xml
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         private static XDocument Serialize<T>(T source)
         {
 

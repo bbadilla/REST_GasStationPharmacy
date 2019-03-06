@@ -13,10 +13,17 @@ namespace WebApi.Service_Logic
     public class MedicamentoService
     {
 
-        private static object medicamento;
+        //private static object medicamento;
 
+            /// <summary>
+            /// /Direcion del xml
+            /// </summary>
         public static string SiteAddress { get; set; }
 
+        /// <summary>
+        /// /Obtiene todos los elementos del xml
+        /// </summary>
+        /// <returns></returns>
         public static List<Medicamento> GetAll()
         {
 
@@ -29,16 +36,25 @@ namespace WebApi.Service_Logic
 
 
 
-
+        /// <summary>
+        /// Anade un nuevo medicamento en xml
+        /// </summary>
+        /// <param name="medicamento"></param>
         public static void AddMedicamento(Medicamento medicamento)
         {
 
             var medicamentos = GetAll();
             medicamentos.Add(medicamento);
             XDocument doc = Serialize<List<Medicamento>>(medicamentos);
-            doc.Save(ConfigurationManager.AppSettings["Archivo1"]);
+            doc.Save(ConfigurationManager.AppSettings["Archivo3"]);
         }
 
+        /// <summary>
+        /// /serializa el xml
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         private static XDocument Serialize<T>(T source)
         {
 

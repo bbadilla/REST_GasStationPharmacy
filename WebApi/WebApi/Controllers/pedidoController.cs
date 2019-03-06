@@ -12,6 +12,10 @@ namespace WeApi.Controllers
     public class pedidoController : ApiController
     {
 
+        /// <summary>
+        /// Get para obtener todos los pedidos
+        /// </summary>
+        /// <returns>  Todos los pedidos del xml de tipo Objeto Pedido </returns>
         public IEnumerable<Pedido> Get()
         {
 
@@ -21,6 +25,10 @@ namespace WeApi.Controllers
 
         }
 
+        /// <summary>
+       /// //////Post de pedido para anadir uno nuevo
+        /// </summary>
+        /// <param name="pedido"></param>
         public void Post(Pedido pedido)
         {
 

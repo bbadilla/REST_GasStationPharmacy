@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfDoctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Doctor>
     <Cedula>109854122</Cedula>
@@ -9,5 +8,18 @@
     <NumDoctor>85254547</NumDoctor>
     <Nombre>Emanuel</Nombre>
   </Doctor>
-  
+  <Doctor>
+    <Cedula>0</Cedula>
+    <Apellidos />
+    <Residencia />
+    <NumDoctor>0</NumDoctor>
+    <Nombre />
+  </Doctor>
+  <Doctor>
+    <Cedula>5</Cedula>
+    <Apellidos>dvxvc</Apellidos>
+    <Residencia>sdvx</Residencia>
+    <NumDoctor>2</NumDoctor>
+    <Nombre>xdxvc</Nombre>
+  </Doctor>
 </ArrayOfDoctor>

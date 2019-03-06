@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rol>
+    <Nombre>109854122</Nombre>
+    <Descripcion>Esquivel Lopez</Descripcion>
+  </Rol>
+</ArrayOfRol>

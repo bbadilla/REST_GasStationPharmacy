@@ -11,7 +11,10 @@ namespace WeApi.Controllers
 {
     public class recetaController : ApiController
     {
-
+        /// <summary>
+        /// Get para obtener todos las recetas
+        /// </summary>
+        /// <returns>  Todos las recetas del xml de tipo Objeto Receta </returns>
         public IEnumerable<Receta> Get()
         {
 
@@ -21,10 +24,14 @@ namespace WeApi.Controllers
 
         }
 
+        /// <summary>
+        /// Post de receta para anadir uno nuevo
+        /// </summary>
+        /// <param name="receta"></param>
         public void Post(Receta receta)
         {
 
-            RecetaService.AddCliente(receta);
+            RecetaService.AddReceta(receta);
 
         }
     }

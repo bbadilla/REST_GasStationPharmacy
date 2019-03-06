@@ -13,10 +13,16 @@ namespace WebApi.Models
 {
     public class RecetaService
     {
-        private static object cliente;
-
+        //private static object cliente;
+        /// <summary>
+        /// /Direccion del xml
+        /// </summary>
         public static string SiteAddress { get; set; }
 
+        /// <summary>
+        /// Obtiene todos los elementos del xml
+        /// </summary>
+        /// <returns></returns>
         public static List<Receta> GetAll()
         {
 
@@ -29,16 +35,25 @@ namespace WebApi.Models
 
 
 
-
-        public static void AddCliente(Receta receta)
+        /// <summary>
+        /// /Anade 
+        /// </summary>
+        /// <param name="receta"></param>
+        public static void AddReceta(Receta receta)
         {
 
             var recetas = GetAll();
             recetas.Add(receta);
             XDocument doc = Serialize<List<Receta>>(recetas);
-            doc.Save(ConfigurationManager.AppSettings["Archivo1"]);
+            doc.Save(ConfigurationManager.AppSettings["Archivo4"]);
         }
 
+        /// <summary>
+        /// serializa el xml
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         private static XDocument Serialize<T>(T source)
         {
 

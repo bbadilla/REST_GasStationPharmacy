@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Icon.ico">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main3.css">
+	<title>Registro</title>
+</head>
+<body>
+
+	<div class="container">
+    
+		<div class="form__top">
+			<h2><span>Registro <span1>Clientes</span1></span></h2>
+		</div>		
+        <form class="form__reg" action="">
+
+            <input class="input" id="cliente" type="text" placeholder="&#128100;  Cliente" required autofocus>
+            <input class="input" id="recojo" type="text" placeholder="&#128100;  Recojo" required>
+            <input class="input" id="listaMedicamentos" type="text" placeholder="&#128222;  Lista de medicamentos" required>
+            <input class="input" id="telefono" type="text" placeholder="&#128222;  Telefono" required>
+            <input class="input" id="hora" type="text" placeholder="&#128100;  Hora" required>
+            <input class="input" id="imagen" type="text" placeholder="&#128100;  Imagen" required>
+            <input class="input" id="estado" type="text" placeholder="&#128100;  Estado" required>
+            <div class="btn__form">
+                <!--<input id="Enviar" class="btn__submit" type="submit" value="REGISTRAR">-->
+                <td colspan="2">
+                    <button class="btn__reset" id="Enviar">Enviar</button>
+                </td>
+                <input class="btn__reset" type="reset" value="LIMPIAR">
+            </div>
+        </form>
+	</div>
+	
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+	<script>
+		var uri = 'api/pedido';
+
+		$(document).ready(function () {
+			// Send an AJAX request
+			cargarClientes();
+			$("#Enviar").click(enviarDatos);
+
+		});
+
+		function cargarClientes() {
+			$.getJSON(uri)
+				.done(function (data) {
+
+					$.each(data, function (key, item) {
+
+						$('<li>', { text: formatItem(item) }).appendTo($('#pedido'));
+					});
+				});
+		}
+
+		function formatItem(item) {
+			return item.cedula + '  ' + item.nombre + '  ' + item.apellidos;
+		}
+
+		function find() {
+			var id = $('#nombre').val();
+			$.getJSON(uri + '/' + id)
+				.done(function (data) {
+					$('#cliente').text(formatItem(data));
+				})
+				.fail(function (jqXHR, textStatus, err) {
+					$('#cliente').text('Error: ' + err);
+				});
+		}
+
+		function enviarDatos() {
+			var cliente = {};
+			cliente.recojo = $("#recojo").val();
+			cliente.acliente = $("#cliente").val();
+			cliente.estado = $("#estado").val();
+			cliente.telefono = $("#telefono").val();
+			cliente.imagen = $("#imagen").val();
+			cliente.medicamentos = $("#medicamentos").val();
+			cliente.hora = $("#hora").val()
+
+			llamadoAsincrono(uri, cliente, terminado);
+		}
+
+		function terminado() {
+
+			cargarClientes();
+			alert("Enviado Correctamente");
+		}
+
+		function llamadoAsincrono(url, data, success) {
+
+			$.ajax(
+				{
+					url: url,
+					type: "POST",
+					success: success,
+					error: capturarError,
+					data: JSON.stringify(data),
+					contentType: "application/json"
+				});
+		}
+
+		function capturarError(error) {
+			alert(error);
+		}
+
+	   
+
+	</script>
+</body>
+</html>

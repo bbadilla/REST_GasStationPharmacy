@@ -11,7 +11,9 @@ namespace WeApi.Models
     {
        
      
-        ///  CEDULAAA
+        /// <summary>
+        /// Atributo cedula con su get y set
+        /// </summary>
         private int cedula;
 
         public int Cedula {
@@ -25,9 +27,9 @@ namespace WeApi.Models
             
         }
 
-      /// <summary>
-      /// /
-      /// </summary>
+        /// <summary>
+        /// Atributo apellidos con su get y set
+        /// </summary>
         private string apellidos;
 
         public string Apellidos
@@ -42,7 +44,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// //
+        /// Atributo residencia con su get y set
         /// </summary>
         private string residencia;
 
@@ -56,12 +58,10 @@ namespace WeApi.Models
                 this.residencia = value;
             }
         }
-        /// <summary>
-        /// //
-        /// </summary>
 
-      
-        //////
+        /// <summary>
+        /// Atributo fechaNacimiento con su get y set
+        /// </summary>
         private string fechaNacimiento;
 
         public string FechaNacimiento
@@ -76,7 +76,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// ///
+        /// Atributo telefono con su get y set
         /// </summary>
         private int telefono;
 
@@ -92,7 +92,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// /
+        /// Atributo Padecimientos con su get y set
         /// </summary>
         private string padecimientos;
 
@@ -108,7 +108,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// //
+        /// Atributo nombre con su get y set
         /// </summary>
         private string nombre;
 

@@ -11,7 +11,10 @@ namespace WeApi.Controllers
 {
     public class doctorController : ApiController
     {
-
+        /// <summary>
+        /// Get para obtener todos los doctores
+        /// </summary>
+        /// <returns>  Todos los doctores del xml de tipo Objeto Doctor </returns>
         public IEnumerable<Doctor> Get()
         {
 
@@ -21,6 +24,10 @@ namespace WeApi.Controllers
 
         }
 
+        /// <summary>
+        /// Post de doctor para anadir uno nuevo
+        /// </summary>
+        /// <param name="doctor"></param>
         public void Post(Doctor doctor)
         {
 

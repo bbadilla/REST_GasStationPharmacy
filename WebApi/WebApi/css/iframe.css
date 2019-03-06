@@ -1,0 +1,21 @@
+<style type="text/css">
+#outerdiv
+{
+{ /* es el tamaño del iframe */ }
+width:500px;
+height:450px;
+overflow:hidden;
+position:relative;
+}
+#inneriframe
+{
+position:absolute;
+{ /* distancia de arriba y de la izquierda */ } 
+top:-500px;
+left:0px;
+
+{ /* la suma de la distancia y el tamaño */ }
+width:1000px;
+height:1000px;
+}
+</style>

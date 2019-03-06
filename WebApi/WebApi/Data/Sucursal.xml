@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSucursal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sucursal>
+    <Nombre>109854122</Nombre>
+    <Descripcion>Esquivel Lopez</Descripcion>
+    <Direccion>Palmares</Direccion>
+  </Sucursal>
+</ArrayOfSucursal>

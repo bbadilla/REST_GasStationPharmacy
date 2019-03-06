@@ -13,10 +13,16 @@ namespace WebApi.Models
 {
     public class PedidoService
     {
-        private static object pedido;
-
+        //private static object pedido;
+        /// <summary>
+        /// Direcicion del xml
+        /// </summary>
         public static string SiteAddress { get; set; }
 
+        /// <summary>
+        /// obteber todos los elementos del xml
+        /// </summary>
+        /// <returns></returns>
         public static List<Pedido> GetAll()
         {
 
@@ -29,16 +35,25 @@ namespace WebApi.Models
 
 
 
-
+        /// <summary>
+        /// //Anade un nuevo pedido al xml
+        /// </summary>
+        /// <param name="pedido"></param>
         public static void AddPedido(Pedido pedido)
         {
 
             var pedidos = GetAll();
             pedidos.Add(pedido);
             XDocument doc = Serialize<List<Pedido>>(pedidos);
-            doc.Save(ConfigurationManager.AppSettings["Archivo1"]);
+            doc.Save(ConfigurationManager.AppSettings["Archivo4"]);
         }
 
+        /// <summary>
+        /// serializa el xml
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         private static XDocument Serialize<T>(T source)
         {
 

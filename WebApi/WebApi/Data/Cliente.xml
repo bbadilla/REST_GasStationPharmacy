@@ -41,4 +41,20 @@
     <Padecimientos>HJYJYFJY</Padecimientos>
     <Nombre>VINI</Nombre>
   </Cliente>
+  <Cliente>
+    <Cedula>0</Cedula>
+    <Apellidos />
+    <Residencia />
+    <Telefono>0</Telefono>
+    <Padecimientos />
+    <Nombre />
+  </Cliente>
+  <Cliente>
+    <Cedula>2</Cedula>
+    <Apellidos>dvxc</Apellidos>
+    <Residencia>sdczv</Residencia>
+    <Telefono>9</Telefono>
+    <Padecimientos>xfcv</Padecimientos>
+    <Nombre>sdv</Nombre>
+  </Cliente>
 </ArrayOfCliente>

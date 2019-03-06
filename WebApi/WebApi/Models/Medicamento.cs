@@ -7,9 +7,11 @@ namespace WeApi.Models
 {
     public class Medicamento
     {
-      
-        
-        
+
+
+        /// <summary>
+        /// Atributo cantidad con su get y set
+        /// </summary>
         private int cantidad;
 
         public int Cantidad
@@ -27,7 +29,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// /
+        /// Atributo nombre con su get y set
         /// </summary>
         private string nombre;
 
@@ -45,7 +47,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// //
+        /// Atributo farmacia con su get y set
         /// </summary>
         private string farmacia;
 
@@ -61,12 +63,10 @@ namespace WeApi.Models
                 this.farmacia = value;
             }
         }
+
         /// <summary>
-        /// //
+        /// Atributo precio con su get y set
         /// </summary>
-
-
-        //////
         private string precio;
 
         public string Precio
@@ -83,12 +83,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// ///
-        /// </summary>
-      
-
-        /// <summary>
-        /// /
+        /// Atributo prescripcion con su get y set
         /// </summary>
         private string prescripcion;
 
@@ -104,11 +99,6 @@ namespace WeApi.Models
                 this.prescripcion = value;
             }
         }
-
-        /// <summary>
-        /// //
-        /// </summary>
-        
 
     }
 }

@@ -12,6 +12,10 @@ namespace WeApi.Controllers
     public class medicamentoController : ApiController
     {
 
+        /// <summary>
+        /// Get para obtener todos los medicamentos
+        /// </summary>
+        /// <returns>  Todos los medicamentos del xml de tipo Objeto Medicamento </returns>
         public IEnumerable<Medicamento> Get() {
 
             //ClienteService.SiteAddress = string.Format("http://{0}{1}", Request.RequestUri.Host, (Request.RequestUri.Port != 80) ? string.Format(":{0}", Request.RequestUri.Port) : string.Empty);
@@ -20,6 +24,10 @@ namespace WeApi.Controllers
 
         }
 
+        /// <summary>
+        /// //////Post de medicamento para anadir uno nuevo
+        /// </summary>
+        /// <param name="medicamento"></param>
         public void Post(Medicamento medicamento)
         {
 
@@ -30,4 +38,4 @@ namespace WeApi.Controllers
     }
 
 }
-}
+

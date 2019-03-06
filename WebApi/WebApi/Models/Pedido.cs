@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,8 +7,10 @@ namespace WeApi.Models
 {
     public class Pedido
     {
-        
 
+        /// <summary>
+        /// Atributo recojo con su get y set
+        /// </summary>
         private string recojo;
 
         public string Recojo
@@ -26,7 +28,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// 
+        /// Atributo cliente con su get y set
         /// </summary>
         private string cliente;
 
@@ -45,8 +47,9 @@ namespace WeApi.Models
 
         }
 
-        /////
-        ///
+        /// <summary>
+        /// Atributo telefono con su get y set
+        /// </summary>
         private string telefono;
 
 
@@ -64,8 +67,9 @@ namespace WeApi.Models
 
         }
 
-        /////
-        ///
+        /// <summary>
+        /// Atributo listaMedicamentos con su get y set
+        /// </summary>
         private string listaMedicamentos;
 
 
@@ -83,8 +87,9 @@ namespace WeApi.Models
 
         }
 
-        /////
-        ///
+        /// <summary>
+        /// Atributo hora con su get y set
+        /// </summary>
         private string hora;
 
 
@@ -103,7 +108,7 @@ namespace WeApi.Models
         }
 
         /// <summary>
-        /// 
+        /// Atributo imagen con su get y set
         /// </summary>
         private string imagen;
 
@@ -118,6 +123,25 @@ namespace WeApi.Models
             set
             {
                 this.imagen = value;
+            }
+
+        }
+
+        /// <summary>
+        /// Atributo estado con su get y set
+        /// </summary>
+	    private string estado;
+
+	    public string Estado
+        {
+            get
+            {
+                return this.estado;;
+            }
+
+            set
+            {
+                this.estado = value;
             }
 
         }
